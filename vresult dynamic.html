@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic</title>
+</head>
+<body>
+</body>
+<h3>student seat: <span id="seat"></span></h3>
+<h3>mother name :<span id="mname"></span></h3>
+
+<table>
+    <tr>
+    <th>marathi</th>
+    <th>english</th>
+    <th>physics</th>
+    <th>chemistry</th>
+    <th>mathematics</th>
+    <th>bio</th>
+    </tr>
+    <tr>
+        <td id="td1"></td>
+        <td id="td2"></td>
+        <td id="td3"></td>
+        <td id="td4"></td>
+        <td id="td5"></td>
+        <td id="td6"></td>
+    </tr>
+   
+</table>
+<form name="fm">
+    seat no:<input type="number" name="seat"/>
+    <br><br>
+    mother name:<input type="text" name="mname"/>
+    <br><br>
+
+</form>
+
+<script>
+    function Result(){
+        seat = parseInt(document.fm.seat.value);
+        mname = document.fm.mname.value;
+
+        seat1 = ['123','124','125']
+        mname1 = ['lata','rani','varsha']
+        marks = {'123':[80,75,60,78,45,85],'124':[45,78,48,75,78,96],'125': [68,85,78,48,45,78]}
+        //alert("run")
+        for(i=0;i<seat1.length;i++){
+         if(seat == seat1[i] && mname == mname1[i]){
+            var marks = marks[seat]
+
+            document.getElementById('td1').innerHTML = marks[0]
+            document.getElementById('td2').innerHTML = marks[1]
+            document.getElementById('td3').innerHTML = marks[2]
+            document.getElementById('td4').innerHTML = marks[3]
+            document.getElementById('td5').innerHTML = marks[4]
+            document.getElementById('td6').innerHTML = marks[5]
+            document.getElementById('seat').innerHTML = seat
+            document.getElementById('mname').innerHTML = mname
+            
+            break
+         }
+         
+        }
+    }
+    Result()
+
+</script>
+<input type="submit" onclick="Result()"/>
+</body>
+</html>
