@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <script>
+        var arr = ()=> document.write("hello my name is rohit" + "<br>")
+        arr()
+
+        //arrow function with default return
+
+        var re = () => 11+2
+        document.write(re() + "<br>")
+
+        re1=()=>{
+         return 11+2
+        }
+        document.write(re1()+ "<br>")
+
+        //arrow function with parameter
+        
+        para1 = param => param
+        document.write(para1("rohit")+"<br>")
+
+        para2 = param => param
+        document.write(para2(12) + "<br>")
+
+        //passing multipal parameter
+
+        mul = (a,b,c,d)=>a+b+c+d
+        document.write(mul(1,2,3,4)+"<br>")
+
+        //arrow function with spread operater
+        sp = (...a)=>a
+        document.write(sp(1,2,3,4,5,"rohit","zanjure")+"<br>")
+
+
+    </script> 
+</body>
+</html>

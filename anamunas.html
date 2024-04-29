@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ananomas function</title>
+</head>
+<body>
+    <script>
+    a =['C:\Users\Rohit\Desktop\java scripts\img1.jpg','C:\Users\Rohit\Desktop\java scripts\img2.jpg','C:\Users\Rohit\Desktop\java scripts\img3.jpg']
+     i=0
+     setInterval(function change(){
+        document.getElementById("id").src = a[i];
+        i++
+        if(i>a.length){
+            i=0
+        }
+     }
+     (change,2000))
+    </script>
+    <img src='C:\Users\Rohit\Desktop\java scripts\img1.jpg' width="100%" height="600px" id="id" class="button"/>
+    <p class="button" onclick="change()">></p>
+    <button onclick="change()">next</button>
+    <marquee><img src='C:\Users\Rohit\Desktop\java scripts\img1.jpg' width="100px" height="100px" id="id" class="button"/></marquee>
+     </script>
+    
+</body>
+</html>
